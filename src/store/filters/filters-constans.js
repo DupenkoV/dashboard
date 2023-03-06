@@ -1,0 +1,3 @@
+export const DELETE_ALL_FILTERS = 'DELETE_ALL_FILTERS';
+export const DELETE_FILTER = 'DELETE_FILTER';
+export const ADD_FILTER = 'ADD_FILTER';
