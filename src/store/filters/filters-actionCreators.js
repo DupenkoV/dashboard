@@ -10,6 +10,6 @@ export const deleteFilter = (payload) => ({
     payload
 });
 
-export const deleteAllFilters = () => ({
+export const deleteAllFilters =  ({
     type: DELETE_ALL_FILTERS,
 });
