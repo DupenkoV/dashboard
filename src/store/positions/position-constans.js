@@ -1,1 +1,0 @@
-export const ADD_POSITION = 'ADD_POSITIONS';

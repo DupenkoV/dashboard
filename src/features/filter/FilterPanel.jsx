@@ -4,8 +4,8 @@ import { Badge } from 'UI/Badge';
 import { Card } from 'UI/Card';
 import { Stack } from 'UI/Stack';
 
-import { deleteAllFilters, deleteFilter } from '../store/filters/filters-actionCreators';
-import { selectFilter } from 'store/filters/filters-selector';
+import { removeFilter, clearFilter } from './filter-slice.js'; 
+import { selectFilter } from './filter-slice.js';
 
 const FilterPanel = () => {
   const currentFilter = useSelector(selectFilter)
@@ -21,7 +21,7 @@ const FilterPanel = () => {
             <Badge 
             key={item}
             variant="clearable"
-            onClear={() => dispatch(deleteFilter(item))}
+            onClear={() => dispatch(removeFilter(item))}
             >
               {item}
             </Badge>
@@ -29,7 +29,7 @@ const FilterPanel = () => {
 
         </Stack>
 
-        <button className='link' onClick={() => dispatch(deleteAllFilters)}>Clear</button>
+        <button className='link' onClick={() => dispatch(clearFilter())}>Clear</button>
       </div>
     </Card>
   )
